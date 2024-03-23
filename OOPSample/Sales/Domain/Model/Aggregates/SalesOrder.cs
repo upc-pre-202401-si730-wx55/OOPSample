@@ -19,5 +19,6 @@ public class SalesOrder(int id, int customerId)
     {
         ShippingAddress = new Address(street, city, state, zipCode);
     }
-    
+
+    public double CalculateTotalPrice() => _items.Sum(x => x.CalculateItemPrice());
 }
